@@ -379,75 +379,101 @@
   </div>
 </section>
     <!-- INTERACTIVE BOOKING & CALCULATOR (ساختار ۱۰۰٪ حفظ شد، اما متون قیمت‌ها به منصفانه تغییر کرد) -->
+    <!-- INTERACTIVE BOOKING & WHATSAPP CONNECTION -->
     <section id="booking" class="py-20 bg-stone-950 text-white px-4 relative overflow-hidden">
-        <!-- Background Ambient Glow -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-amber-500/5 filter blur-[100px] z-0"></div>
 
         <div class="max-w-4xl mx-auto relative z-10">
             <div class="text-center space-y-3 mb-12">
-                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">سیستم شفاف استعلام خدمات و رزرو نوبت</span>
-                <h2 class="text-3xl font-black">رزرو آسان و آنی نوبت</h2>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">سیستم رزرو نوبت آنلاین</span>
+                <h2 class="text-3xl font-black">ارتباط مستقیم با سالن</h2>
                 <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
-                <p class="text-stone-400 text-xs">خدمات مد نظرتان را علامت بزنید، وضعیت تعرفه را ببینید و زمان مراجعه را مشخص کنید.</p>
+                <p class="text-stone-400 text-xs">خدمات مد نظرتان را علامت بزنید و مستقیماً از طریق واتس‌اپ با ما هماهنگ کنید.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                 
-                <!-- Price Calculator Column (Left/Top) -->
-                <div class="md:col-span-7 bg-stone-900/80 border border-white/5 p-6 rounded-3xl space-y-6">
+                <!-- Services Selection Column -->
+                <div class="md:col-span-7 bg-stone-900/80 border border-white/5 p-6 rounded-3xl space-y-4">
                     <h3 class="text-lg font-extrabold text-amber-400 flex items-center gap-2">
                         <i class="fa-solid fa-list-check"></i> مرحله اول: انتخاب خدمات
                     </h3>
-
-                    <!-- Service Checkboxes -->
-                    <div class="space-y-3">
-                        <label class="flex items-center justify-between p-4 bg-stone-950/60 hover:bg-stone-950 rounded-2xl border border-white/5 cursor-pointer transition-all">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" value="0" data-name="اصلاح صورت و ابرو" onchange="calculateTotal()" class="w-4 h-4 text-amber-500 accent-amber-500 focus:ring-0 rounded">
-                                <span class="text-xs font-bold">اصلاح صورت و طراحی ابرو (عالی)</span>
-                            </div>
-                            <span class="text-xs text-amber-400 font-bold">قیمت منصفانه</span>
-                        </label>
-
-                        <label class="flex items-center justify-between p-4 bg-stone-950/60 hover:bg-stone-950 rounded-2xl border border-white/5 cursor-pointer transition-all">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" value="0" data-name="رنگ مو و ابرو" onchange="calculateTotal()" class="w-4 h-4 text-amber-500 accent-amber-500 focus:ring-0 rounded">
-                                <span class="text-xs font-bold">رنگ مو و ابروی تخصصی (عالی)</span>
-                            </div>
-                            <span class="text-xs text-amber-400 font-bold">قیمت اقتصادی</span>
-                        </label>
-
-                        <label class="flex items-center justify-between p-4 bg-stone-950/60 hover:bg-stone-950 rounded-2xl border border-white/5 cursor-pointer transition-all">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" value="0" data-name="شینیون و میکاپ" onchange="calculateTotal()" class="w-4 h-4 text-amber-500 accent-amber-500 focus:ring-0 rounded">
-                                <span class="text-xs font-bold">شینیون و میکاپ مجلسی</span>
-                            </div>
-                            <span class="text-xs text-amber-400 font-bold">با نازل‌ترین قیمت</span>
-                        </label>
-
-                        <label class="flex items-center justify-between p-4 bg-stone-950/60 hover:bg-stone-950 rounded-2xl border border-amber-500/30 cursor-pointer transition-all relative">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" value="0" data-name="کاشت ناخن (آفر هنرجو)" onchange="calculateTotal()" class="w-4 h-4 text-amber-500 accent-amber-500 focus:ring-0 rounded">
-                                <span class="text-xs font-bold">کاشت ناخن / پدیکور (تحت نظارت مربی)</span>
-                            </div>
-                            <span class="text-xs text-emerald-400 font-bold">آفر ویژه هنرجو</span>
-                        </label>
+                    
+                    <div class="bg-amber-500/10 border border-amber-500/20 p-3 rounded-xl text-center">
+                        <p class="text-xs text-amber-200 font-bold leading-relaxed">«تمامی خدمات زیبایی سالن عسل دخت با استفاده از مواد اولیه مرغوب، بالاترین کیفیت و مناسب‌ترین قیمت ارائه می‌شود.»</p>
                     </div>
 
-                    <!-- Live Total Price Area -->
-                    <div class="bg-amber-500/10 border border-amber-500/20 p-4 rounded-2xl flex justify-between items-center">
-                        <span class="text-xs text-stone-400 font-bold">وضعیت برآورد هزینه خدمات:</span>
-                        <span id="calculated-total-display" class="text-sm font-black text-amber-400">با نازل‌ترین قیمت روز</span>
+                    <!-- Scrollable Services List -->
+                    <div class="space-y-2 h-72 overflow-y-auto pr-2 custom-scrollbar">
+                        
+                        <!-- لاین مو -->
+                        <div class="text-amber-500 text-xs font-bold pt-2 border-b border-white/10 pb-1">💇‍♀️ لاین مو (کوتاهی و استایل)</div>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="اصلاح و کوتاهی ژورنالی (کوپ)" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">اصلاح و کوتاهی ژورنالی (کوپ)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="براشینگ و استایل مو" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">براشینگ و استایل مو</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="شینیون مجلسی و محفلی" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">شینیون مجلسی و محفلی</span>
+                        </label>
+
+                        <!-- لاین رنگ -->
+                        <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">🎨 لاین رنگ مو</div>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="رنگ موی کامل / ریشه" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">رنگ موی کامل / ریشه</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="رنگ و مش، هایلایت و بالیاژ" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">رنگ و مش، هایلایت و بالیاژ</span>
+                        </label>
+
+                        <!-- لاین ابرو -->
+                        <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">👁️ لاین اصلاح و ابرو</div>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="اصلاح کامل صورت (بند/شمع)" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">اصلاح کامل صورت (بند/شمع)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="طراحی، قرینه‌سازی و اصلاح تخصصی ابرو" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">طراحی، قرینه‌سازی و اصلاح تخصصی ابرو</span>
+                        </label>
+
+                        <!-- لاین میکاپ -->
+                        <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">💄 لاین میکاپ</div>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="میکاپ و آرایش مجلسی" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">میکاپ و آرایش مجلسی</span>
+                        </label>
+
+                        <!-- لاین ناخن -->
+                        <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">💅 لاین تخصصی ناخن</div>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="کاشت و ترمیم ناخن" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">کاشت و ترمیم ناخن</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="ژلیش و کاور ناخن طبیعی" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">ژلیش و کاور ناخن طبیعی</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
+                            <input type="checkbox" value="مانیکور و پدیکور" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
+                            <span class="text-xs font-bold">مانیکور و پدیکور</span>
+                        </label>
                     </div>
                 </div>
 
-                <!-- Personal Information & Timing Column (Right/Bottom) -->
+                <!-- Personal Information & WhatsApp Button -->
                 <div class="md:col-span-5 bg-stone-900/80 border border-white/5 p-6 rounded-3xl space-y-6">
                     <h3 class="text-lg font-extrabold text-amber-400 flex items-center gap-2">
                         <i class="fa-solid fa-user-pen"></i> مرحله دوم: مشخصات نوبت
                     </h3>
 
-                    <form id="appointment-form" onsubmit="handleFormSubmission(event)" class="space-y-4">
+                    <form id="appointment-form" onsubmit="handleWhatsAppSubmission(event)" class="space-y-4">
                         <div>
                             <label class="block text-[10px] text-stone-400 font-bold mb-1">نام و نام خانوادگی شما</label>
                             <input type="text" id="cust-name" required class="w-full bg-stone-950 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-500 transition-all">
@@ -470,14 +496,13 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="w-full gold-bg text-stone-950 font-black text-xs py-4 rounded-xl shadow-lg hover:shadow-amber-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-circle-check"></i> ثبت درخواست رزرو و استعلام نوبت
+                        <button type="submit" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-black text-xs py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-4">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> ارسال درخواست نوبت به واتس‌اپ
                         </button>
                     </form>
                 </div>
 
             </div>
-
         </div>
     </section>
 
