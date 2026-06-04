@@ -580,7 +580,7 @@
      </footer>
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
-    <script>
+   <script>
         // Before/After comparison slider initialization
         const slider = document.getElementById('before-after-slider');
         const resizeImg = document.getElementById('slider-resize-img');
@@ -617,52 +617,46 @@
             updateSlider(e.touches[0].clientX);
         });
 
-        // Price calculator logic (تغییر یافت تا به جای عدد، متن لوکس و منصفانه نمایش دهد)
-        function calculateTotal() {
-            const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]');
-            let hasSelection = false;
-
-            checkboxes.forEach(box => {
-                if (box.checked) {
-                    hasSelection = true;
-                }
-            });
-
-            const display = document.getElementById('calculated-total-display');
-            if(hasSelection) {
-                display.innerText = 'با نازل‌ترین قیمت و آفر ویژه';
-            } else {
-                display.innerText = 'با نازل‌ترین قیمت روز';
-            }
-            return 0;
-        }
-
-        // Booking form action and Modal Triggering
-        function handleFormSubmission(event) {
+        // Booking form action - WhatsApp Integration
+        function handleWhatsAppSubmission(event) {
+            // جلوگیری از رفرش شدن صفحه
             event.preventDefault();
 
+            // ۱. دریافت اطلاعات متنی فرم
             const name = document.getElementById('cust-name').value;
             const phone = document.getElementById('cust-phone').value;
             const day = document.getElementById('cust-day').value;
 
-            // Gathering selected services names
-            const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]');
+            // ۲. دریافت خدمات انتخاب شده (چک‌باکس‌ها)
+            const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]:checked');
             let selectedServices = [];
             checkboxes.forEach(box => {
-                if (box.checked) {
-                    selectedServices.push(box.getAttribute('data-name'));
-                }
+                // دریافت متن خدمات از ویژگی value در HTML
+                selectedServices.push(box.value);
             });
 
+            // اگر هیچ خدماتی تیک نخورده بود
             if (selectedServices.length === 0) {
                 selectedServices.push("مشاوره عمومی زیبایی");
             }
 
-            // Populate custom success modal with details (حذف قیمت عددی از متن پاپ‌آپ موفقیت)
-            const summaryDisplay = document.getElementById('success-summary');
-            summaryDisplay.innerHTML = `سرکار خانم <strong>${name}</strong>، درخواست مشاوره و رزرو شما برای روز <strong>${day}</strong> جهت دریافت خدمات (<strong>${selectedServices.join('، ')}</strong>) با **نازل‌ترین قیمت** در سیستم ثبت موقت شد.`;
+            // ۳. ساخت پیام متنی تمیز و مرتب برای واتس‌اپ
+            const message = `سلام سالن زیبایی عسل دخت 🌸\nمن درخواست رزرو نوبت دارم:\n\n👤 نام: ${name}\n📱 شماره تماس: ${phone}\n📅 روز مراجعه: ${day}\n✅ خدمات درخواستی: ${selectedServices.join('، ')}`;
 
-            // Open Modal with nice transition
+            // ۴. تبدیل پیام برای استفاده در لینک (URL Encoding)
+            const encodedMessage = encodeURIComponent(message);
+            
+            // ۵. شماره واتس‌اپ سالن (حتما باید با 98 شروع شود بدون صفر)
+            const whatsappNumber = "989185249251"; 
+
+            // ۶. ایجاد لینک واتس‌اپ و هدایت کاربر به صفحه چت
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+
+            // ۷. نمایش پاپ‌آپ موفقیت در سایت (برای اطمینان خاطر مشتری)
+            const summaryDisplay = document.getElementById('success-summary');
+            summaryDisplay.innerHTML = `سرکار خانم <strong>${name}</strong>، درخواست شما برای روز <strong>${day}</strong> جهت دریافت خدمات (<strong>${selectedServices.join('، ')}</strong>) در حال انتقال به برنامه واتس‌اپ است.`;
+
             const modal = document.getElementById('success-modal');
             modal.classList.remove('hidden');
             setTimeout(() => {
@@ -670,19 +664,18 @@
             }, 50);
         }
 
+        // تابع بستن پاپ‌آپ و ریست کردن فرم
         function closeModal() {
             const modal = document.getElementById('success-modal');
             modal.classList.add('opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                // Reset form fields
+                // پاک کردن فرم بعد از بستن پاپ‌آپ
                 document.getElementById('appointment-form').reset();
                 const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]');
                 checkboxes.forEach(box => box.checked = false);
-                calculateTotal();
             }, 300);
         }
     </script>
-
 </body>
 </html>
