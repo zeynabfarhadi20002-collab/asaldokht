@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article style="direction: rtl; text-align: right;">
+    <h1 style="color: #b38600; border-bottom: 1px solid #eee; padding-bottom: 15px; font-size: 28px;">{{ page.title }}</h1>
+    <p style="color: #999; font-size: 13px; margin-bottom: 30px;">تاریخ انتشار: {{ page.date | date: "%Y/%m/%d" }}</p>
+    
+    <div class="article-content" style="line-height: 1.8; font-size: 16px; color: #444; text-align: justify;">
+        {{ content }}
+    </div>
+
+    <hr style="margin-top: 50px; border: 0; border-top: 1px solid #eee;">
+    <a href="/blog.html" style="color: #b38600; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">← بازگشت به لیست مقالات</a>
+</article>
