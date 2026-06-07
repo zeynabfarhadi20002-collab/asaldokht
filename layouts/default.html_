@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | عسل دخت</title>
+    <style>
+        body { font-family: 'Tahoma', sans-serif; background-color: #fafafa; color: #333; margin: 0; padding: 0; }
+        header { background-color: #111; color: #fff; padding: 20px; text-align: center; border-bottom: 3px solid #b38600; }
+        header a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; }
+        header a:hover { color: #b38600; }
+        .container { max-width: 800px; margin: 40px auto; padding: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        footer { background-color: #111; color: #888; text-align: center; padding: 20px; font-size: 14px; margin-top: 60px; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">صفحه اصلی سالن</a>
+        <a href="/blog.html">بخش مقالات</a>
+    </header>
+
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <footer>
+        <p>تمام حقوق برای مجموعه زیبایی عسل دخت محفوظ است © ۲۰۲۶</p>
+    </footer>
+</body>
+</html>
