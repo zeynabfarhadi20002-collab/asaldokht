@@ -3,28 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | عسل دخت</title>
+    <title>{{ page.title }} | سالن زیبایی عسل دخت</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        body { font-family: 'Tahoma', sans-serif; background-color: #fafafa; color: #333; margin: 0; padding: 0; }
-        header { background-color: #111; color: #fff; padding: 20px; text-align: center; border-bottom: 3px solid #b38600; }
-        header a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 16px; }
-        header a:hover { color: #b38600; }
-        .container { max-width: 800px; margin: 40px auto; padding: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        footer { background-color: #111; color: #888; text-align: center; padding: 20px; font-size: 14px; margin-top: 60px; border-top: 1px solid #222; }
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #fcfaf7;
+            color: #2b241e;
+            scroll-behavior: smooth;
+        }
+
+        .brand-serif {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Gold gradient styling */
+        .gold-text {
+            background: linear-gradient(135deg, #b88728 0%, #f3e5ab 50%, #9c6e15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-bg {
+            background: linear-gradient(135deg, #a8791e 0%, #d4af37 50%, #8c6010 100%);
+        }
+
+        /* Honeycomb pattern overlay */
+        .honeycomb-pattern {
+            background-image: radial-gradient(circle at 50% 50%, rgba(168, 121, 30, 0.015) 0%, transparent 70%),
+                              linear-gradient(rgba(168, 121, 30, 0.01) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(168, 121, 30, 0.01) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+        }
     </style>
 </head>
-<body>
-    <header>
-        <a href="/">صفحه اصلی سالن</a>
-        <a href="/blog.html">بخش مقالات</a>
-    </header>
+<body class="honeycomb-pattern min-h-screen flex flex-col justify-between">
 
-    <div class="container">
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-500/10 shadow-sm px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo and Name -->
+            <div class="flex items-center gap-3">
+                <img src="/logo.png" alt="لوگوی عسل دخت" class="h-12 w-auto drop-shadow-md">
+                <div>
+                    <span class="brand-serif text-lg font-bold tracking-wider block text-stone-900">ASAL DOKHT</span>
+                    <span class="text-[10px] text-amber-700 tracking-widest uppercase block -mt-1 font-bold">سالن زیبایی عسل دخت</span>
+                </div>
+            </div>
+
+            <!-- Links for Desktop -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+                <a href="/#about" class="hover:text-amber-700 transition-colors">داستان ما</a>
+                <a href="/#services" class="hover:text-amber-700 transition-colors">منوی خدمات</a>
+                <a href="/#before-after" class="hover:text-amber-700 transition-colors">هنر تغییر (قبل و بعد)</a>
+                <a href="/blog.html" class="text-amber-700 font-bold border-b-2 border-amber-500 pb-0.5 transition-colors">مقالات علمی</a>
+                <a href="/#booking" class="hover:text-amber-700 transition-colors text-amber-800 flex items-center gap-1">
+                    <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
+                </a>
+            </div>
+
+            <!-- Header Contact / Action Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="tel:09185249251" class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-full transition-all">
+                    <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی
+                </a>
+                <a href="/#booking" class="gold-bg text-stone-950 font-black text-xs px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
+                    رزرو و استعلام
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-4xl mx-auto px-4 py-16 w-full flex-grow">
         {{ content }}
-    </div>
+    </main>
 
-    <footer>
-        <p>تمام حقوق برای مجموعه زیبایی عسل دخت محفوظ است © ۲۰۲۶</p>
+    <!-- FOOTER & CONTACT SECTION -->
+    <footer class="bg-[#1a1511] text-stone-400 py-12 px-4 border-t border-amber-500/5 w-full">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start text-right">
+            
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center gap-3 justify-start">
+                    <img src="/newfooter.png" alt="logo footer" class="h-14 w-auto drop-shadow-md">    
+                    <div>
+                        <span class="brand-serif text-xl font-bold tracking-wider text-white">ASAL DOKHT</span>
+                        <span class="text-[10px] text-amber-500 tracking-widest uppercase block -mt-1 font-extrabold">سالن زیبایی عسل دخت</span>
+                    </div>
+                </div>
+                <p class="text-xs leading-relaxed text-stone-400 max-w-sm">
+                    تجربه‌ای اصیل، صمیمانه و باکیفیت از آرایش تخصصی و درخشش رنگ‌های عسلی مو در محیطی کاملاً ایمن و بهداشتی برای آرامش شما بانوان گرامی.
+                </p>
+            </div>
+
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="text-white font-black text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-amber-500"></i> پل‌های ارتباطی و آدرس
+                </h4>
+                <div class="text-xs space-y-2 leading-relaxed">
+                    <p><strong class="text-stone-200">نشانی سالن:</strong> استان مرکزی، اراک/سی متری فوتبال/کوچه فلسفی/جنب مدرسه راجعی </p>
+                    <p><strong class="text-stone-200">تلفن هماهنگی:</strong> 09185249251</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="text-white font-black text-sm">پیوند‌های ناوبری سریع</h4>
+                <ul class="text-xs space-y-2 font-semibold">
+                    <li><a href="/#about" class="hover:text-amber-500 transition-colors">داستان سالن ما</a></li>
+                    <li><a href="/#services" class="hover:text-amber-500 transition-colors">لیست هزینه‌ها و خدمات</a></li>
+                    <li><a href="/blog.html" class="hover:text-amber-500 transition-colors">مقالات علمی</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-white/5 mt-10 pt-6 text-center text-[10px] text-stone-500">
+            تمامی حقوق مادی و معنوی این وب‌سایت متعلق به آرایشگاه زنانه عسل دخت می‌باشد. طراحی شده برای درخشش شما © ۱۴۰۵
+        </div>
     </footer>
+
 </body>
 </html>
