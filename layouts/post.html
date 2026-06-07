@@ -1,21 +1,20 @@
 ---
 layout: default
 ---
-<article class="bg-white border border-amber-500/10 rounded-3xl p-6 md:p-10 shadow-sm space-y-6">
+<article dir="rtl" class="bg-white border border-amber-500/10 rounded-3xl p-6 md:p-10 shadow-sm space-y-6 text-right"> 
     <div class="space-y-3 border-b border-stone-100 pb-6">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-[11px] font-bold text-amber-950">
             <i class="fa-solid fa-book-open text-amber-600"></i> مقاله‌ی آموزشی سالن عسل دخت
         </div>
-        <h1 class="text-2xl md:text-4xl font-black text-stone-900 leading-tight">
+        <h1 class="text-2xl md:text-4xl font-black text-amber-900 leading-tight">
             {{ page.title }}
         </h1>
         <p class="text-stone-400 text-xs flex items-center gap-1 pt-1">
-            <i class="fa-solid fa-calendar-days"></i> تاریخ انتشار و به‌روزرسانی: {{ page.date | date: "%Y/%m/%d" }}
+            <i class="fa-solid fa-calendar-days"></i> تاریخ انتشار: {{ page.date | date: "%Y/%m/%d" }}
         </p>
     </div>
     
-    <!-- TEXT CONTENT -->
-    <div class="text-stone-700 text-sm md:text-base leading-loose space-y-4 text-justify font-normal">
+    <div class="text-stone-700 text-sm md:text-base leading-loose space-y-4 text-right font-normal">
         {{ content }}
     </div>
 
