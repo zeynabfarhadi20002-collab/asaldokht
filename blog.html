@@ -1,0 +1,21 @@
+---
+layout: default
+title: مقالات سالن عسل دخت
+---
+
+<div style="direction: rtl; text-align: right; padding: 20px; font-family: Tahoma, sans-serif;">
+    <h1>وبلاگ سالن زیبایی عسل دخت</h1>
+    <p>جدیدترین مقالات و آموزش‌های روز دنیا درباره زیبایی و سلامت</p>
+    <hr>
+
+    <div class="blog-list">
+        {% for post in site.posts %}
+            <div class="blog-card" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                <h2>
+                    <a href="{{ post.url }}" style="text-decoration: none; color: #b38600;">{{ post.title }}</a>
+                </h2>
+                <p style="font-size: 12px; color: #777;">منتشر شده در: {{ post.date | date: "%Y/%m/%d" }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
