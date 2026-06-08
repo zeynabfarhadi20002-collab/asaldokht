@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سالن زیبایی تخصصی عسل دخت | حس لطافت و درخشش واقعی</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -38,7 +35,7 @@
 
         /* Honeycomb pattern overlay */
         .honeycomb-pattern {
-            background-image: radial-gradient(circle at 50% 50%, rgba(168, 121, 30, 0.015) 0%, transparent 70%),
+            background-image: radial-gradient(circle at 50% 50%, rgba(168, 121, 30, 0.01) 0%, transparent 70%),
                               linear-gradient(rgba(168, 121, 30, 0.01) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(168, 121, 30, 0.01) 1px, transparent 1px);
             background-size: 100% 100%, 30px 30px, 30px 30px;
@@ -59,64 +56,41 @@
             width: 50%;
             overflow: hidden;
         }
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-500/10 shadow-sm px-4 lg:px-8 py-2.5 md:py-3">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="logo.png" alt="لوگوی عسل دخت" class="h-11 md:h-12 w-auto drop-shadow-md">
-                <div>
-                    <span class="brand-serif text-base md:text-lg font-bold tracking-wider block text-stone-900">ASAL DOKHT</span>
-                    <span class="text-[9px] md:text-[10px] text-amber-700 tracking-widest uppercase block -mt-1 font-bold">سالن زیبایی عسل دخت</span>
-                </div>
-            </div>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
-                <a href="#about" class="hover:text-amber-700 transition-colors">داستان ما</a>
-                <a href="#services" class="hover:text-amber-700 transition-colors">منوی خدمات</a>
-                <a href="#before-after" class="hover:text-amber-700 transition-colors">هنر تغییر (قبل و بعد)</a>
-                <a href="/blog.html" class="hover:text-amber-700 transition-colors">مقالات علمی</a>
-                <a href="#booking" class="hover:text-amber-700 transition-colors text-amber-800 flex items-center gap-1">
-                    <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
-                </a>
-            </div>
+        .handle-bar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            left: 50%;
+            background-color: #d4af37;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
 
-            <div class="flex items-center gap-3">
-                <a href="tel:09185249251" class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-full transition-all">
-                    <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی
-                </a>
-                <a href="#booking" class="gold-bg text-stone-950 font-black text-xs px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
-                    رزرو و استعلام
-                </a>
-            </div>
-        </div>
-
-        <div class="flex md:hidden items-center gap-6 text-xs font-bold text-stone-600 overflow-x-auto whitespace-nowrap mt-3 pt-2 border-t border-stone-100/70 scroll-smooth mobile-menu-scroller">
-            <a href="#about" class="hover:text-amber-700 transition-colors pb-1.5 px-1">داستان ما</a>
-            <a href="#services" class="hover:text-amber-700 transition-colors pb-1.5 px-1">منوی خدمات</a>
-            <a href="#before-after" class="hover:text-amber-700 transition-colors pb-1.5 px-1">هنر تغییر</a>
-            <a href="/blog.html" class="hover:text-amber-700 transition-colors pb-1.5 px-1">مقالات علمی</a>
-            <a href="#booking" class="text-amber-800 pb-1.5 px-1 flex items-center gap-1">
-                <i class="fa-solid fa-calendar-check text-[10px]"></i> رزرو نوبت
-            </a>
-        </div>
-
-        <style>
-            .mobile-menu-scroller::-webkit-scrollbar {
-                display: none; /* برای کروم، سافاری و اپرا */
-            }
-            .mobile-menu-scroller {
-                -ms-overflow-style: none;  /* برای اینترنت اکسپلورر */
-                scrollbar-width: none;  /* برای فایرفاکس */
-            }
-        </style>
-    </nav>
-  
+        .handle-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2b241e;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: ew-resize;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body class="honeycomb-pattern min-h-screen">
 
-    <!-- NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-500/10 shadow-sm px-4 lg:px-8 py-3">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Brand Logo and Name -->
             <div class="flex items-center gap-3">
                 <img src="logo.png" alt="لوگوی عسل دخت" class="h-12 w-auto drop-shadow-md">
                 <div>
@@ -125,7 +99,6 @@
                 </div>
             </div>
 
-            <!-- Links for Desktop -->
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
                 <a href="#about" class="hover:text-amber-700 transition-colors">داستان ما</a>
                 <a href="#services" class="hover:text-amber-700 transition-colors">منوی خدمات</a>
@@ -136,23 +109,36 @@
                 </a>
             </div>
 
-            <!-- Header Contact / Action Buttons -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3">
                 <a href="tel:09185249251" class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-full transition-all">
                     <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی
                 </a>
-                <a href="#booking" class="gold-bg text-stone-950 font-black text-xs px-5 py-2.5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
+                <a href="#booking" class="gold-bg text-stone-950 font-black text-xs px-4 py-2.5 sm:px-5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
                     رزرو و استعلام
                 </a>
+                
+                <button id="menu-toggle" class="md:hidden p-2 text-stone-700 hover:text-amber-700 focus:outline-none transition-colors" aria-label="منوی موبایل">
+                    <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-3 border-t border-amber-500/10 pt-3 pb-2 space-y-1.5 px-2 bg-white rounded-2xl shadow-inner">
+            <a href="#about" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">داستان ما</a>
+            <a href="#services" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">منوی خدمات</a>
+            <a href="#before-after" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">هنر تغییر (قبل و بعد)</a>
+            <a href="/blog.html" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">مقالات علمی</a>
+            <a href="#booking" class="block text-sm font-bold text-amber-800 hover:text-amber-900 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all flex items-center gap-1.5">
+                <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
+            </a>
+            <a href="tel:09185249251" class="sm:hidden flex items-center justify-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 py-3 rounded-xl transition-all mt-2">
+                <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی مستقیم
+            </a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="relative min-h-[85vh] flex items-center justify-center py-16 px-4 overflow-hidden">
-        <!-- Visual Backdrop Grid -->
         <div class="absolute inset-0 z-0">
-            <!-- تصویر درخواستی شما جایگزین شد -->
             <img src="lady.png" alt="پرتره هنری عسل دخت" class="w-full h-full object-cover object-center brightness-[0.4] contrast-[1.1] scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-[#fcfaf7] via-transparent to-black/50"></div>
         </div>
@@ -183,19 +169,17 @@
         </div>
     </header>
 
-    <!-- ABOUT US SECTION -->
     <section id="about" class="py-20 px-4 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Logo Brand Graphic -->
             <div class="lg:col-span-5 flex flex-col items-center justify-center bg-white border border-amber-500/10 p-10 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/5 rounded-full filter blur-2xl"></div>
                 <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-amber-500/5 rounded-full filter blur-2xl"></div>
-                <img src="x.png" alt="لوگوی دایره‌ای عسل دخت" class="h-64 w-auto drop-shadow-2xl mb-6 relative z-10 hover:scale-[1.02] transition-all duration-300">                <h3 class="brand-serif text-2xl font-bold text-stone-900 tracking-wider">ASAL DOKHT</h3>
+                <img src="x.png" alt="لوگوی دایره‌ای عسل دخت" class="h-64 w-auto drop-shadow-2xl mb-6 relative z-10 hover:scale-[1.02] transition-all duration-300">
+                <h3 class="brand-serif text-2xl font-bold text-stone-900 tracking-wider">ASAL DOKHT</h3>
                 <p class="text-xs text-amber-800 font-bold tracking-widest mt-1">تعهد به لطافت و کمال زیبایی</p>
             </div>
 
-            <!-- Story Description Content -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-xs font-bold text-amber-950">
                     داستان برند عسل دخت
@@ -205,7 +189,6 @@
                     در سالن زیبایی «عسل دخت»، شعار ما صداقت، کیفیت و تلاش مستمر است. ما بر این باوریم که هر بانو داستانی متمایز از زیبایی دارد که سزاوار شکوفا شدن است. دکوراسیون گرم، کادر صمیمی و متخصص، در کنار استفاده از برترین برندهای آرایشی روز دنیا، اتمسفری شاهانه را برای لحظات آرامش‌بخش شما به وجود آورده است.
                 </p>
 
-                <!-- Core Pillars Icons Group -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-dashed border-stone-200">
                     <div class="flex gap-4">
                         <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-700 text-lg border border-amber-100"><i class="fa-solid fa-heart"></i></div>
@@ -228,12 +211,12 @@
     </section>
 
     <div class="max-w-xl mx-auto p-8 my-10 bg-white border-t-4 border-amber-600 rounded-2xl shadow-lg text-center">
-    <h3 class="text-2xl font-bold text-stone-800 mb-4">تماس با سالن عسل دخت</h3>
-    <p class="text-stone-600">📍 اراک، سی متری فوتبال، کوچه فلسفی،جنب مدرسه راجعی</p>
-    <p class="text-stone-600">📞 09185249251</p>
-    <a href="https://www.instagram.com/[آیدی]" class="inline-block mt-4 px-6 py-2 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition">Instagram: @asaldokht1847</a>
-</div>
-    <!-- SERVICES SECTION -->
+        <h3 class="text-2xl font-bold text-stone-800 mb-4">تماس با سالن عسل دخت</h3>
+        <p class="text-stone-600">📍 اراک، سی متری فوتبال، کوچه فلسفی،جنب مدرسه راجعی</p>
+        <p class="text-stone-600">📞 09185249251</p>
+        <a href="https://www.instagram.com/[آیدی]" class="inline-block mt-4 px-6 py-2 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition">Instagram: @asaldokht1847</a>
+    </div>
+
     <section id="services" class="py-20 bg-white border-y border-amber-500/10 px-4">
         <div class="max-w-7xl mx-auto space-y-16">
             
@@ -244,10 +227,8 @@
                 <p class="text-stone-500 text-xs max-w-lg mx-auto">معرفی واقع‌گرایانه خدمات بر اساس بالاترین سطح کیفیت و جلب رضایت مشتریان وفادار</p>
             </div>
 
-            <!-- Services Grid with Honest Ratings -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- TOP SPECIALTY 1: Threading & Eyebrows -->
                 <div class="bg-amber-50/20 border border-amber-500/10 hover:border-amber-500/30 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -263,7 +244,6 @@
                     </div>
                 </div>
 
-                <!-- TOP SPECIALTY 2: Hair Dyeing / Coloring -->
                 <div class="bg-amber-50/20 border border-amber-500/10 hover:border-amber-500/30 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -279,7 +259,6 @@
                     </div>
                 </div>
 
-                <!-- ABOVE AVERAGE: Hair styling & Updo (اصلاح شد: حذف متن اعتمادسوز و جایگزینی با نشان VIP) -->
                 <div class="bg-amber-50/20 border border-amber-500/10 hover:border-amber-500/30 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -295,9 +274,7 @@
                     </div>
                 </div>
 
-                <!-- UNDER TRAINING SPECIAL OPPORTUNITY: Nails (Promotional Apprentice Rate!) -->
                 <div class="bg-amber-50/40 border-2 border-amber-500/20 hover:border-amber-500 rounded-3xl p-6 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-                    <!-- Highlighting ribbon -->
                     <div class="absolute top-0 left-0 bg-amber-500 text-stone-950 text-[9px] font-black uppercase py-1 px-4 transform -rotate-45 -translate-x-4 translate-y-2">آفر طلایی</div>
                     
                     <div class="space-y-4">
@@ -319,7 +296,6 @@
         </div>
     </section>
 
-    <!-- BEFORE & AFTER IMAGE SLIDER -->
     <section id="before-after" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="text-center space-y-3 mb-12">
             <span class="text-xs font-bold uppercase tracking-wider text-amber-800">جلوه درخشش واقعی هنر ما</span>
@@ -328,21 +304,16 @@
             <p class="text-stone-500 text-xs">جهت مشاهده تفاوت شگفت‌انگیز میکاپ و شینیون، دستگیره وسط تصویر را به طرفین بکشید!</p>
         </div>
 
-        <!-- Interactive Comparison Slider Container (نام تصاویر بر اساس شناسه جدید تنظیم شد) -->
         <div class="slider-container rounded-3xl shadow-2xl border-4 border-white h-[650px]" id="before-after-slider">
-            <!-- After Image (Background) -->
             <img src="shb.png" alt="شینیون و میکاپ درخشان عسل دخت (بعد از تغییر)" class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none">
             
-            <!-- Before Image (Resizable Overlay) -->
             <div class="resize-img" id="slider-resize-img">
                 <img src="shg.png" alt="میکاپ پایه قبل از درخشش" class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none" style="width: 896px; max-width: none;">
             </div>
 
-            <!-- Labels -->
             <div class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur-sm text-amber-400 text-[10px] font-black px-3 py-1.5 rounded-full select-none">بعد از تغییر (درخشش عسلی)</div>
             <div class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-sm text-white text-[10px] font-black px-3 py-1.5 rounded-full select-none">قبل از تغییر</div>
 
-            <!-- Splitter Handle -->
             <div class="handle-bar" id="slider-handle">
                 <div class="handle-button">
                     <i class="fa-solid fa-arrows-left-right text-xs"></i>
@@ -350,58 +321,53 @@
             </div>
         </div>
     </section>
-    <!-- TESTIMONIALS SECTION -->
-<section id="testimonials" class="py-20 bg-stone-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-16">
-      <span class="text-xs font-bold uppercase tracking-widest text-amber-800">صدای مشتریان ما</span>
-      <h2 class="text-3xl font-black text-stone-900 mt-2">رضایت شما، افتخار ماست</h2>
-      <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
-    </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- بخش تصویر در سمت راست -->
-      <div class="order-1 lg:order-2">
-        <img src="mosh.png" alt="مشتری راضی عسل دخت" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover border-4 border-white">
-      </div>
-<!-- فرم ثبت نظر (ظاهر سفید و طلایی) -->
-<div class="mt-10 bg-white p-8 rounded-3xl shadow-lg border border-amber-500/20">
-    <h3 class="text-xl font-black text-stone-900 text-center mb-6">ثبت نظر شما</h3>
-    <form action="https://formspree.io/f/mojzqror" method="POST" class="space-y-4">
-        <div>
-            <input type="text" name="name" placeholder="نام شما" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none transition">
-        </div>
-        <div>
-            <textarea name="message" placeholder="متن نظر..." rows="3" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none transition"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-sm transition shadow-md">
-            ارسال نظر
-        </button>
-    </form>
-</div>
-      <!-- بخش نظرات در سمت چپ -->
-      <div class="order-2 lg:order-1 space-y-6">
-        <!-- کارت نظرات -->
-        <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
-          <p class="text-stone-600 italic mb-3">"ممنونم از اخلاق خوبتون و کار میکاپ عالییییییییییی بود"</p>
-          <div class="font-bold text-stone-900 text-sm">— Zeinab.</div>
+    <section id="testimonials" class="py-20 bg-stone-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-800">صدای مشتریان ما</span>
+          <h2 class="text-3xl font-black text-stone-900 mt-2">رضایت شما، افتخار ماست</h2>
+          <div class="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
-          <p class="text-stone-600 italic mb-3">"من از کارتون خیلی راضی بودم و خیلی کار تمیزی داشتید امیدوارم موفق باشید"</p>
-          <div class="font-bold text-stone-900 text-sm">— زهرا رجبی.</div>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-1 lg:order-2">
+            <img src="mosh.png" alt="مشتری راضی عسل دخت" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover border-4 border-white">
+          </div>
+          <div class="mt-10 bg-white p-8 rounded-3xl shadow-lg border border-amber-500/20">
+              <h3 class="text-xl font-black text-stone-900 text-center mb-6">ثبت نظر شما</h3>
+              <form action="https://formspree.io/f/mojzqror" method="POST" class="space-y-4">
+                  <div>
+                      <input type="text" name="name" placeholder="نام شما" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none transition">
+                  </div>
+                  <div>
+                      <textarea name="message" placeholder="متن نظر..." rows="3" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none transition"></textarea>
+                  </div>
+                  <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-sm transition shadow-md">
+                      ارسال نظر
+                  </button>
+              </form>
+          </div>
+          <div class="order-2 lg:order-1 space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
+              <p class="text-stone-600 italic mb-3">"ممنونم از اخلاق خوبتون و کار میکاپ عالییییییییییی بود"</p>
+              <div class="font-bold text-stone-900 text-sm">— Zeinab.</div>
+            </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
-          <p class="text-stone-600 italic mb-3">"بینظیری عالی شیرینی مثل عسل واقعا کارتون عالی وحرف نداریدبا آرزوی موفقیت بالاتر"</p>
-          <div class="font-bold text-stone-900 text-sm">—  فاطمه عسگری.</div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
+              <p class="text-stone-600 italic mb-3">"من از کارتون خیلی راضی بودم و خیلی کار تمیزی داشتید امیدوارم موفق باشید"</p>
+              <div class="font-bold text-stone-900 text-sm">— زهرا رجبی.</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-r-4 border-amber-500">
+              <p class="text-stone-600 italic mb-3">"بینظیری عالی شیرینی مثل عسل واقعا کارتون عالی وحرف نداریدبا آرزوی موفقیت بالاتر"</p>
+              <div class="font-bold text-stone-900 text-sm">—  فاطمه عسگری.</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-    <!-- INTERACTIVE BOOKING & CALCULATOR (ساختار ۱۰۰٪ حفظ شد، اما متون قیمت‌ها به منصفانه تغییر کرد) -->
-    <!-- INTERACTIVE BOOKING & WHATSAPP CONNECTION -->
+    </section>
+
     <section id="booking" class="py-20 bg-stone-950 text-white px-4 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-amber-500/5 filter blur-[100px] z-0"></div>
 
@@ -415,7 +381,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                 
-                <!-- Services Selection Column -->
                 <div class="md:col-span-7 bg-stone-900/80 border border-white/5 p-6 rounded-3xl space-y-4">
                     <h3 class="text-lg font-extrabold text-amber-400 flex items-center gap-2">
                         <i class="fa-solid fa-list-check"></i> مرحله اول: انتخاب خدمات
@@ -425,10 +390,8 @@
                         <p class="text-xs text-amber-200 font-bold leading-relaxed">«تمامی خدمات زیبایی سالن عسل دخت با استفاده از مواد اولیه مرغوب، بالاترین کیفیت و مناسب‌ترین قیمت ارائه می‌شود.»</p>
                     </div>
 
-                    <!-- Scrollable Services List -->
                     <div class="space-y-2 h-72 overflow-y-auto pr-2 custom-scrollbar">
                         
-                        <!-- لاین مو -->
                         <div class="text-amber-500 text-xs font-bold pt-2 border-b border-white/10 pb-1">💇‍♀️ لاین مو (کوتاهی و استایل)</div>
                         <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
                             <input type="checkbox" value="اصلاح و کوتاهی ژورنالی (کوپ)" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
@@ -443,7 +406,6 @@
                             <span class="text-xs font-bold">شینیون مجلسی و محفلی</span>
                         </label>
 
-                        <!-- لاین رنگ -->
                         <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">🎨 لاین رنگ مو</div>
                         <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
                             <input type="checkbox" value="رنگ موی کامل / ریشه" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
@@ -454,7 +416,6 @@
                             <span class="text-xs font-bold">رنگ و مش، هایلایت و بالیاژ</span>
                         </label>
 
-                        <!-- لاین ابرو -->
                         <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">👁️ لاین اصلاح و ابرو</div>
                         <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
                             <input type="checkbox" value="اصلاح کامل صورت (بند/شمع)" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
@@ -465,14 +426,12 @@
                             <span class="text-xs font-bold">طراحی، قرینه‌سازی و اصلاح تخصصی ابرو</span>
                         </label>
 
-                        <!-- لاین میکاپ -->
                         <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">💄 لاین میکاپ</div>
                         <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
                             <input type="checkbox" value="میکاپ و آرایش مجلسی" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
                             <span class="text-xs font-bold">میکاپ و آرایش مجلسی</span>
                         </label>
 
-                        <!-- لاین ناخن -->
                         <div class="text-amber-500 text-xs font-bold pt-4 border-b border-white/10 pb-1">💅 لاین تخصصی ناخن</div>
                         <label class="flex items-center gap-3 p-3 bg-stone-950/60 hover:bg-stone-950 rounded-xl border border-white/5 cursor-pointer transition-all">
                             <input type="checkbox" value="کاشت و ترمیم ناخن" class="w-4 h-4 text-amber-500 accent-amber-500 rounded">
@@ -489,7 +448,6 @@
                     </div>
                 </div>
 
-                <!-- Personal Information & WhatsApp Button -->
                 <div class="md:col-span-5 bg-stone-900/80 border border-white/5 p-6 rounded-3xl space-y-6">
                     <h3 class="text-lg font-extrabold text-amber-400 flex items-center gap-2">
                         <i class="fa-solid fa-user-pen"></i> مرحله دوم: مشخصات نوبت
@@ -528,7 +486,6 @@
         </div>
     </section>
 
-    <!-- CUSTOM SUCCESS MODAL (Never alert) -->
     <div id="success-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
         <div class="bg-white text-stone-900 max-w-md w-full p-8 rounded-3xl shadow-2xl border border-amber-500/10 text-center relative space-y-6">
             <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-3xl mx-auto">
@@ -550,15 +507,14 @@
         </div>
     </div>
 
-    <!-- FOOTER & CONTACT SECTION (اصلاح موقعیت مکانی به اراک) -->
     <footer class="bg-[#1a1511] text-stone-400 py-16 px-4 border-t border-amber-500/5">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
             
-            <!-- Salon brand and logo footer column -->
             <div class="md:col-span-5 space-y-6 text-center md:text-right">
                 <div class="flex items-center gap-3 justify-center md:justify-start">
-<img src="newfooter.png" alt="logo footer" class="h-16 w-auto drop-shadow-md">    
-                    <span class="brand-serif text-xl font-bold tracking-wider text-white">ASAL DOKHT</span>
+                    <img src="newfooter.png" alt="logo footer" class="h-16 w-auto drop-shadow-md">    
+                    <div>
+                        <span class="brand-serif text-xl font-bold tracking-wider text-white block">ASAL DOKHT</span>
                         <span class="text-[10px] text-amber-500 tracking-widest uppercase block -mt-1 font-extrabold">سالن زیبایی عسل دخت</span>
                     </div>
                 </div>
@@ -571,7 +527,6 @@
                 </div>
             </div>
 
-            <!-- Contact and Hours column (آدرس به اراک تغییر یافت) -->
             <div class="md:col-span-4 space-y-4">
                 <h4 class="text-white font-black text-sm flex items-center gap-2">
                     <i class="fa-solid fa-map-location-dot text-amber-500"></i> پل‌های ارتباطی و آدرس
@@ -583,7 +538,6 @@
                 </div>
             </div>
 
-            <!-- Fast links column -->
             <div class="md:col-span-3 space-y-4 text-center md:text-right">
                 <h4 class="text-white font-black text-sm">پیوند‌های ناوبری سریع</h4>
                 <ul class="text-xs space-y-3 font-semibold">
@@ -601,9 +555,36 @@
         </div>
      </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
-   <script>
-        // Before/After comparison slider initialization
+    <script>
+        // --- MOBILE MENU INTERACTION LOGIC ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // تغییر آیکون همبرگری به دکمه ضربدر بستن
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // بستن منو پس از کلیک روی لینک‌های منوی موبایل (به همراه اسکرول نرم به بخش مربوطه)
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+
+        // --- BEFORE/AFTER SLIDER LOGIC ---
         const slider = document.getElementById('before-after-slider');
         const resizeImg = document.getElementById('slider-resize-img');
         const handle = document.getElementById('slider-handle');
@@ -622,7 +603,6 @@
             resizeImg.style.width = percentage + '%';
         }
 
-        // Dragging Event Listeners for Desktop and Mobile
         slider.addEventListener('mousedown', () => { isDragging = true; });
         window.addEventListener('mouseup', () => { isDragging = false; });
         
@@ -639,43 +619,32 @@
             updateSlider(e.touches[0].clientX);
         });
 
-        // Booking form action - WhatsApp Integration
+
+        // --- WHATSAPP BOOKING INTEGRATION ---
         function handleWhatsAppSubmission(event) {
-            // جلوگیری از رفرش شدن صفحه
             event.preventDefault();
 
-            // ۱. دریافت اطلاعات متنی فرم
             const name = document.getElementById('cust-name').value;
             const phone = document.getElementById('cust-phone').value;
             const day = document.getElementById('cust-day').value;
 
-            // ۲. دریافت خدمات انتخاب شده (چک‌باکس‌ها)
             const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]:checked');
             let selectedServices = [];
             checkboxes.forEach(box => {
-                // دریافت متن خدمات از ویژگی value در HTML
                 selectedServices.push(box.value);
             });
 
-            // اگر هیچ خدماتی تیک نخورده بود
             if (selectedServices.length === 0) {
                 selectedServices.push("مشاوره عمومی زیبایی");
             }
 
-            // ۳. ساخت پیام متنی تمیز و مرتب برای واتس‌اپ
             const message = `سلام سالن زیبایی عسل دخت 🌸\nمن درخواست رزرو نوبت دارم:\n\n👤 نام: ${name}\n📱 شماره تماس: ${phone}\n📅 روز مراجعه: ${day}\n✅ خدمات درخواستی: ${selectedServices.join('، ')}`;
-
-            // ۴. تبدیل پیام برای استفاده در لینک (URL Encoding)
             const encodedMessage = encodeURIComponent(message);
-            
-            // ۵. شماره واتس‌اپ سالن (حتما باید با 98 شروع شود بدون صفر)
             const whatsappNumber = "989185249251"; 
 
-            // ۶. ایجاد لینک واتس‌اپ و هدایت کاربر به صفحه چت
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             window.open(whatsappUrl, '_blank');
 
-            // ۷. نمایش پاپ‌آپ موفقیت در سایت (برای اطمینان خاطر مشتری)
             const summaryDisplay = document.getElementById('success-summary');
             summaryDisplay.innerHTML = `سرکار خانم <strong>${name}</strong>، درخواست شما برای روز <strong>${day}</strong> جهت دریافت خدمات (<strong>${selectedServices.join('، ')}</strong>) در حال انتقال به برنامه واتس‌اپ است.`;
 
@@ -686,13 +655,11 @@
             }, 50);
         }
 
-        // تابع بستن پاپ‌آپ و ریست کردن فرم
         function closeModal() {
             const modal = document.getElementById('success-modal');
             modal.classList.add('opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                // پاک کردن فرم بعد از بستن پاپ‌آپ
                 document.getElementById('appointment-form').reset();
                 const checkboxes = document.querySelectorAll('#booking input[type="checkbox"]');
                 checkboxes.forEach(box => box.checked = false);
