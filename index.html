@@ -59,36 +59,57 @@
             width: 50%;
             overflow: hidden;
         }
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-500/10 shadow-sm px-4 lg:px-8 py-2.5 md:py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="لوگوی عسل دخت" class="h-11 md:h-12 w-auto drop-shadow-md">
+                <div>
+                    <span class="brand-serif text-base md:text-lg font-bold tracking-wider block text-stone-900">ASAL DOKHT</span>
+                    <span class="text-[9px] md:text-[10px] text-amber-700 tracking-widest uppercase block -mt-1 font-bold">سالن زیبایی عسل دخت</span>
+                </div>
+            </div>
 
-        .handle-bar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            left: 50%;
-            background-color: #d4af37;
-            cursor: ew-resize;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+                <a href="#about" class="hover:text-amber-700 transition-colors">داستان ما</a>
+                <a href="#services" class="hover:text-amber-700 transition-colors">منوی خدمات</a>
+                <a href="#before-after" class="hover:text-amber-700 transition-colors">هنر تغییر (قبل و بعد)</a>
+                <a href="/blog.html" class="hover:text-amber-700 transition-colors">مقالات علمی</a>
+                <a href="#booking" class="hover:text-amber-700 transition-colors text-amber-800 flex items-center gap-1">
+                    <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
+                </a>
+            </div>
 
-        .handle-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #2b241e;
-            border: 2px solid #d4af37;
-            color: #d4af37;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: ew-resize;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-    </style>
+            <div class="flex items-center gap-3">
+                <a href="tel:09185249251" class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-full transition-all">
+                    <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی
+                </a>
+                <a href="#booking" class="gold-bg text-stone-950 font-black text-xs px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
+                    رزرو و استعلام
+                </a>
+            </div>
+        </div>
+
+        <div class="flex md:hidden items-center gap-6 text-xs font-bold text-stone-600 overflow-x-auto whitespace-nowrap mt-3 pt-2 border-t border-stone-100/70 scroll-smooth mobile-menu-scroller">
+            <a href="#about" class="hover:text-amber-700 transition-colors pb-1.5 px-1">داستان ما</a>
+            <a href="#services" class="hover:text-amber-700 transition-colors pb-1.5 px-1">منوی خدمات</a>
+            <a href="#before-after" class="hover:text-amber-700 transition-colors pb-1.5 px-1">هنر تغییر</a>
+            <a href="/blog.html" class="hover:text-amber-700 transition-colors pb-1.5 px-1">مقالات علمی</a>
+            <a href="#booking" class="text-amber-800 pb-1.5 px-1 flex items-center gap-1">
+                <i class="fa-solid fa-calendar-check text-[10px]"></i> رزرو نوبت
+            </a>
+        </div>
+
+        <style>
+            .mobile-menu-scroller::-webkit-scrollbar {
+                display: none; /* برای کروم، سافاری و اپرا */
+            }
+            .mobile-menu-scroller {
+                -ms-overflow-style: none;  /* برای اینترنت اکسپلورر */
+                scrollbar-width: none;  /* برای فایرفاکس */
+            }
+        </style>
+    </nav>
+  
 </head>
 <body class="honeycomb-pattern min-h-screen">
 
