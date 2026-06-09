@@ -19,6 +19,20 @@ layout: default
                 [&_h3]:text-amber-500 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-4 [&_h3]:mb-2
                 [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1">
         {{ content }}
+        <!-- بخش پرسش و پاسخ خودکار عسل دخت -->
+<div id="disqus_thread" style="margin-top: 50px; padding: 20px; font-family: inherit; direction: rtl;"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "{{ page.url | absolute_url }}"; // آدرس دقیق و مستقیم هر مقاله
+        this.page.identifier = "{{ page.id }}"; // شناسه‌ی منحصربه‌فرد هر مقاله
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://asaldokht.disqus.com/embed.js'; 
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
     </div>
 
     <div class="pt-8 border-t border-dashed border-stone-200 flex justify-between items-center flex-wrap gap-4">
