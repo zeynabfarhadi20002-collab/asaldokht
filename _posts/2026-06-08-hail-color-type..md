@@ -64,3 +64,17 @@ title: "چطور با انتخاب رنگ موی مناسب، چهره‌تان 
 **برای یک مشاوره صادقانه و تخصصی، با ما تماس بگیرید:**
 * **📞 شماره تماس:** [09185249251]
 * **📍 عسل دخت؛ احترام به سلامت و زیبایی موهای شما.**
+
+<div id="disqus_thread" style="margin-top: 50px; padding: 20px;"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname;
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://asaldokht.disqus.com/embed.js'; 
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
