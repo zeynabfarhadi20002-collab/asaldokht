@@ -19,12 +19,17 @@ layout: default
                 [&_h3]:text-amber-500 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-4 [&_h3]:mb-2
                 [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1">
         {{ content }}
-        <!-- بخش پرسش و پاسخ خودکار عسل دخت -->
-<div id="disqus_thread" style="margin-top: 50px; padding: 20px; font-family: inherit; direction: rtl;"></div>
+       <!-- بخش پرسش و پاسخ خودکار عسل دخت با متن راهنما -->
+<div style="margin-top: 60px; padding: 0 20px; direction: rtl; text-align: right; font-family: inherit;">
+    <h3 style="font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; color: #333;">لطفا نظرات و پرسش های خود را با ما به اشتراک بگذارید</h3>
+    <p style="font-size: 1rem; color: #666; margin-bottom: 25px;">تیم پشتیبانی سایت در اسرع وقت پاسخگو شما خواهند بود</p>
+</div>
+
+<div id="disqus_thread" style="padding: 0 20px; font-family: inherit; direction: rtl;"></div>
 <script>
     var disqus_config = function () {
-        this.page.url = "{{ page.url | absolute_url }}"; // آدرس دقیق و مستقیم هر مقاله
-        this.page.identifier = "{{ page.id }}"; // شناسه‌ی منحصربه‌فرد هر مقاله
+        this.page.url = "{{ page.url | absolute_url }}";
+        this.page.identifier = "{{ page.id }}";
     };
     (function() { 
         var d = document, s = d.createElement('script');
