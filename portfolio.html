@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلبوم نمونه کارهای تخصصی | سالن زیبایی عسل دخت</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #fcfaf7;
+            color: #2b241e;
+            scroll-behavior: smooth;
+        }
+
+        .brand-serif {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Gold gradient styling */
+        .gold-text {
+            background: linear-gradient(135deg, #b88728 0%, #f3e5ab 50%, #9c6e15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-bg {
+            background: linear-gradient(135deg, #a8791e 0%, #d4af37 50%, #8c6010 100%);
+        }
+
+        /* Honeycomb pattern overlay */
+        .honeycomb-pattern {
+            background-image: radial-gradient(circle at 50% 50%, rgba(168, 121, 30, 0.01) 0%, transparent 70%),
+                              linear-gradient(rgba(168, 121, 30, 0.01) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(168, 121, 30, 0.01) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+        }
+    </style>
+</head>
+<body class="honeycomb-pattern min-h-screen flex flex-col justify-between">
+
+    <!-- ========================================== -->
+    <!-- هدر و منوی بالای سایت (اصلاح شده و هماهنگ) -->
+    <!-- ========================================== -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-500/10 shadow-sm px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="لوگوی عسل دخت" class="h-12 w-auto drop-shadow-md">
+                <div>
+                    <span class="brand-serif text-lg font-bold tracking-wider block text-stone-900">ASAL DOKHT</span>
+                    <span class="text-[10px] text-amber-700 tracking-widest uppercase block -mt-1 font-bold">سالن زیبایی عسل دخت</span>
+                </div>
+            </div>
+
+            <!-- منوی دسکتاپ: لینک‌ها به بخش‌های فایل اصلی ارجاع می‌دهند و هنر تغییر حذف شده است -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+                <a href="index.html#about" class="hover:text-amber-700 transition-colors">داستان ما</a>
+                <a href="index.html#services" class="hover:text-amber-700 transition-colors">منوی خدمات</a>
+                <a href="portfolio.html" class="text-amber-700 font-bold border-b-2 border-amber-600 pb-0.5">آلبوم نمونه کارها</a>
+                <a href="/blog.html" class="hover:text-amber-700 transition-colors">مقالات علمی</a>
+                <a href="index.html#booking" class="hover:text-amber-700 transition-colors text-amber-800 flex items-center gap-1">
+                    <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
+                </a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="tel:09185249251" class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 px-4 py-2 rounded-full transition-all">
+                    <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی
+                </a>
+                <a href="index.html#booking" class="gold-bg text-stone-950 font-black text-xs px-4 py-2.5 sm:px-5 rounded-full shadow-lg shadow-amber-500/15 hover:scale-[1.03] active:scale-[0.98] transition-all">
+                    رزرو و استعلام
+                </a>
+                
+                <button id="menu-toggle" class="md:hidden p-2 text-stone-700 hover:text-amber-700 focus:outline-none transition-colors" aria-label="منوی موبایل">
+                    <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- منوی موبایل: هماهنگ با صفحه اصلی و حاوی لینک نمونه کارها -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3 border-t border-amber-500/10 pt-3 pb-2 space-y-1.5 px-2 bg-white rounded-2xl shadow-inner">
+            <a href="index.html#about" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">داستان ما</a>
+            <a href="index.html#services" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">منوی خدمات</a>
+            <a href="portfolio.html" class="block text-sm font-bold text-amber-700 bg-amber-50/50 px-3 py-2 rounded-xl transition-all">آلبوم نمونه کارها</a>
+            <a href="/blog.html" class="block text-sm font-semibold text-stone-700 hover:text-amber-700 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all">مقالات علمی</a>
+            <a href="index.html#booking" class="block text-sm font-bold text-amber-800 hover:text-amber-900 hover:bg-amber-50/50 px-3 py-2 rounded-xl transition-all flex items-center gap-1.5">
+                <i class="fa-solid fa-calendar-check"></i> استعلام و رزرو نوبت
+            </a>
+            <a href="tel:09185249251" class="sm:hidden flex items-center justify-center gap-2 text-xs font-bold text-stone-800 bg-stone-100 hover:bg-stone-200 py-3 rounded-xl transition-all mt-2">
+                <i class="fa-solid fa-phone text-amber-600"></i> نوبت تلفنی مستقیم
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- بخش اصلی: گالری عکس موزاییکی (پینترستی) -->
+    <!-- ========================================== -->
+    <main class="flex-grow py-16 px-4 max-w-7xl mx-auto w-full">
+        
+        <!-- عنوان اصلی صفحه گالری -->
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-800">آلبوم اختصاصی سالن عسل دخت</span>
+            <h1 class="text-3xl md:text-4xl font-black text-stone-900 leading-tight">نمونه کارهای درخشان ما</h1>
+            <div class="w-16 h-1 gold-bg mx-auto rounded-full"></div>
+            <p class="text-stone-500 text-xs max-w-lg mx-auto">نمایش واقع‌گرایانه هنر آرایش و زیبایی با حفظ کامل اصالت، کادر و ابعاد واقعی تصاویر شما</p>
+        </div>
+
+        <!-- شبکه پینترستی ناهمسان (Masonry Grid) -->
+        <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 space-y-5">
+            
+            <!-- تصویر نمونه ۱ (مثلاً عمودی و بلند) -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-1.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+            <!-- تصویر نمونه ۲ (مثلاً افقی و عریض) -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-2.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+            <!-- تصویر نمونه ۳ (مثلاً مربع) -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-3.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+            <!-- تصویر نمونه ۴ -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-4.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+            <!-- تصویر نمونه ۵ -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-5.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+            <!-- تصویر نمونه ۶ -->
+            <div class="break-inside-avoid overflow-hidden rounded-3xl border border-amber-500/10 shadow-sm bg-white group transition-all duration-300 hover:shadow-md hover:border-amber-500/30">
+                <img src="images/portfolio-6.jpg" alt="نمونه کار عسل دخت" class="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- فوتر پایینی سایت (کاملاً کپی شده و یکدست) -->
+    <!-- ========================================== -->
+    <footer class="bg-[#1a1511] text-stone-400 py-12 px-4 border-t border-amber-500/5 w-full">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+            
+            <div class="md:col-span-5 space-y-6 text-center md:text-right">
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <img src="newfooter.png" alt="logo footer" class="h-16 w-auto drop-shadow-md">    
+                    <div>
+                        <span class="brand-serif text-xl font-bold tracking-wider text-white block">ASAL DOKHT</span>
+                        <span class="text-[10px] text-amber-500 tracking-widest uppercase block -mt-1 font-extrabold">سالن زیبایی عسل دخت</span>
+                    </div>
+                </div>
+                <p class="text-xs leading-relaxed text-stone-400 max-w-sm mx-auto md:mx-0">
+                    تجربه‌ای اصیل، صمیمانه و باکیفیت از آرایش تخصصی و درخشش رنگ‌های عسلی مو در محیطی کاملاً ایمن و بهداشتی برای آرامش شما بانوان گرامی.
+                </p>
+                <div class="flex justify-center md:justify-start gap-4 text-lg">
+                    <a href="https://instagram.com" class="w-10 h-10 rounded-full bg-white/5 hover:bg-amber-500 hover:text-stone-950 flex items-center justify-center transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="tel:0918" class="w-10 h-10 rounded-full bg-white/5 hover:bg-amber-500 hover:text-stone-950 flex items-center justify-center transition-all"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 space-y-4 text-center md:text-right">
+                <h4 class="text-white font-black text-sm flex items-center gap-2 justify-center md:justify-start">
+                    <i class="fa-solid fa-map-location-dot text-amber-500"></i> پل‌های ارتباطی و آدرس
+                </h4>
+                <div class="text-xs space-y-3 leading-relaxed">
+                    <p><strong class="text-stone-200">نشانی سالن:</strong>  استان مرکزی، اراک/سی متری فوتبال/کوچه فلسفی/جنب مدرسه راجعی </p>
+                    <p><strong class="text-stone-200">تلفن هماهنگی:</strong> 09185249251</p>
+                    <p><strong class="text-stone-200">ساعت فعالیت:</strong> همه‌روزه از ساعت ۱۰:۰۰ صبح الی ۱۹:۰۰ عصر (حتی روزهای تعطیل با هماهنگی قبلی)</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-4 text-center md:text-right">
+                <h4 class="text-white font-black text-sm">پیوند‌های ناوبری سریع</h4>
+                <ul class="text-xs space-y-3 font-semibold">
+                    <li><a href="index.html#about" class="hover:text-amber-500 transition-colors">داستان سالن ما</a></li>
+                    <li><a href="index.html#services" class="hover:text-amber-500 transition-colors">لیست هزینه‌ها و خدمات</a></li>
+                    <li><a href="portfolio.html" class="hover:text-amber-500 transition-colors">آلبوم نمونه کارها</a></li>
+                    <li><a href="index.html#booking" class="hover:text-amber-500 transition-colors">رزرو و استعلام نوبت</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-white/5 mt-12 pt-6 text-center text-[10px] text-stone-500">
+            تمامی حقوق مادی و معنوی این کاتالوگ و وب‌سایت متعلق به آرایشگاه زنانه عسل دخت می‌باشد. طراحی شده برای درخشش شما © ۱۴۰۵
+        </div>
+     </footer>
+
+    <script>
+        // --- جاوااسکریپت فعال‌سازی منوی همبرگری موبایل کاملاً مطابق با کدهای خودت ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
